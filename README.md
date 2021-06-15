@@ -1,7 +1,7 @@
 # 장비간 통신 예제
 
 ## 기본개념
----
+
 ### 통신의 종류
 통신 종류는 크게 물리적인 구성에 따라 `Serial통신`과 `TCP/IP통신`으로 나눌 수 있습니다.
  
@@ -25,7 +25,7 @@ Serial통신에 비해 통신속도가 `굉장히 빠릅니다`.
 이름이 같아 서로 같은 프로토콜이라고 생각 할 수 있지만 `MODBUS RTU/ASCII`, `MODBUS TCP`는 서로 전혀 다른 프로토콜이라고 봐도 무방합니다.
 
 ## MODBUS TCP 프로토콜
----
+
 ### 구성
 구성은 크게 `Header`, `Function code`, `Data`로 나뉜다.
 * Header  
@@ -61,11 +61,11 @@ Serial 통신 시 같은 회선에서 각각의 장비를 구분하기 위한 �
 |Bit|Read Discrete Inputs|0x02|
 |Bit|Read Coil|0x01|
 |Bit|Write Single Coils|0x05|
-|Bit|Write Multiple Coils|0x15|
+|Bit|Write Multiple Coils|0x0F|
 |Word|Read Input Resgister|0x04|
 |Word|Read Hoding Resgisters|0x03|
 |Word|Write Single Holding Resgister|0x06|
-|Word|Write Multiple Holding Resgister|0x16|
+|Word|Write Multiple Holding Resgister|0x10|
 
 ### MODBUS TCP 프로토콜의 예시
 0번부터 2개의 데이터를 요청하여 0 ~ 1의 데이터를 요청하였을 때의 응답 프로토콜이다.  
